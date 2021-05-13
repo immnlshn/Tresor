@@ -3,12 +3,10 @@
  */
 package de.immnl.shn.app.tresor;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import de.immnl.shn.app.tresor.core.Ui.Gui;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        new Gui();
     }
 }
