@@ -5,7 +5,6 @@ import java.awt.*;
 public class Gui extends JFrame{
     public Gui(){
         setSize(520,600);
-        setLayout(new GridBagLayout());
         getContentPane().setBackground(new Color(10,14,20));
         
 
