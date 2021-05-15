@@ -26,5 +26,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'de.immnl.shn.app.tresor.App'
+    mainClass = 'de.immnl.shn.app.tresor.Tresor'
 }
