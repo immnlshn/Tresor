@@ -11,7 +11,7 @@ public class Tresor {
         a.setVisible(true);
     }
     public static void input(char chr) throws InterruptedException{
-        if(code.check(chr)){a.correct();a.updateDisplay(a.text+String.valueOf(chr));System.out.println("Correct " + chr);}
-        else{a.incorrect();System.out.println("Incorrect "+chr);}
+        if(code.check(chr)){a.correct();a.updateDisplay(a.text+String.valueOf(chr));}
+        else{a.incorrect();}
     }
 }
