@@ -1,7 +1,7 @@
-# Tresor
-This is my application for lessons in school.
+# Tresor 🔐
+This is my application for lessons in school.🔤
 
-It's written in Java.
+It's written in Java.☕
 
-# Releases
-Currently there is no finished release.
+## Releases ##
+- Currently there is no finished release.🕐
