@@ -14,7 +14,6 @@ public class Gui extends JFrame{
     public Gui(){
         setSize(520,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pin.setOpaque(true);
         build();
     }
     private void build(){ 
@@ -31,6 +30,10 @@ public class Gui extends JFrame{
         Numpad.add(new Numpadbutton("0"));
         add(Numpad, BorderLayout.CENTER);
         add(pin, BorderLayout.NORTH);
+        pin.setOpaque(true);
+        pin.setFont(new Font(Font.MONOSPACED, Font.BOLD,  32));
+        pin.setBackground(new Color(10,14,20));
+        pin.setForeground(new Color(255,255,255));
     }
     public void updateDisplay(String inptext){
         text = inptext;
@@ -39,7 +42,7 @@ public class Gui extends JFrame{
     public void correct() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                if(isGreen) {pin.setBackground(new Color(255,255,255));isGreen = false; ((Timer)e.getSource()).stop();}
+                if(isGreen) {pin.setBackground(new Color(10,14,20));isGreen = false; ((Timer)e.getSource()).stop();}
             } 
         });
         pin.setBackground(new Color(0,255,0));
@@ -50,7 +53,7 @@ public class Gui extends JFrame{
     public void incorrect() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                if(isRed) {pin.setBackground(new Color(255,255,255));isRed = false; ((Timer)e.getSource()).stop();}
+                if(isRed) {pin.setBackground(new Color(10,14,20));isRed = false; ((Timer)e.getSource()).stop();}
             } 
         });
         pin.setBackground(new Color(255,0,0));
