@@ -10,6 +10,5 @@ public class Panel extends JPanel{
         l.setVgap(10);
         setLayout(l);
         setBackground(new Color(10,14,20));
-        
     }
 }

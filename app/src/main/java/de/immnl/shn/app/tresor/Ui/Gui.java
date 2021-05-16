@@ -35,26 +35,22 @@ public class Gui extends JFrame{
         pin.setBackground(new Color(10,14,20));
         pin.setForeground(new Color(255,255,255));
     }
-    public void updateDisplay(String inptext){
-        text = inptext;
-        pin.setText(text);
-    }
+    public void updateDisplay(String inptext){text = inptext;pin.setText(text);}
     public void correct() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(isGreen) {pin.setBackground(new Color(10,14,20));isGreen = false; ((Timer)e.getSource()).stop();}
-            } 
+            }
         });
         pin.setBackground(new Color(0,255,0));
         isGreen = true;
         t.start();
-
     }
     public void incorrect() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(isRed) {pin.setBackground(new Color(10,14,20));isRed = false; ((Timer)e.getSource()).stop();}
-            } 
+            }
         });
         pin.setBackground(new Color(255,0,0));
         isRed = true;
