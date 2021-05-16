@@ -19,7 +19,10 @@ public class Tresor {
     }
 
     public static void unlock(){
-        a.setOptionWindow();
+        a.next();
+    }
+    public static void lock(){
+        a.next();
     }
 }
  

@@ -22,8 +22,7 @@ public class Gui extends JFrame{
         return option;
     }
 
-    public void setOptionWindow(){
+    public void next(){
         card.next(getContentPane());
     }
-
 }

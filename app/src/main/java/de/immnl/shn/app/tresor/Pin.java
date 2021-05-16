@@ -14,7 +14,7 @@ public class Pin {
         System.out.println(this.code);
     }
     public boolean check(char chr){
-        if(code[checkpos]==chr){checkpos++;if(checkpos == 10)Tresor.unlock();return true;}
+        if(code[checkpos]==chr){checkpos++;if(checkpos == 10){Tresor.unlock();checkpos=0;}return true;}
         return false;
     }    
 }

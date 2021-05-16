@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Lockwindow extends JPanel{
     GridLayout numlayout = new GridLayout(4,4);
-    Panel Numpad = new Panel(numlayout);
+    Panel Numpad = new Panel();
     public String text = "Pin: ";
     JLabel pin = new JLabel(text);
     Boolean isGreen = false;
@@ -18,6 +18,9 @@ public class Lockwindow extends JPanel{
         build();
     }
     private void build(){ 
+        numlayout.setHgap(15);
+        numlayout.setVgap(15);
+        Numpad.setLayout(numlayout);
         Numpad.add(new Numpadbutton("7"));
         Numpad.add(new Numpadbutton("8"));
         Numpad.add(new Numpadbutton("9"));
