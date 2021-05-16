@@ -2,11 +2,15 @@ package de.immnl.shn.app.tresor.Ui;
 import javax.swing.*;
 
 import java.awt.*;
+import java.awt.event.*;
 
 public class Gui extends JFrame{
     Panel Numpad = new Panel(4,4);
     public String text = "Pin: ";
     JLabel pin = new JLabel(text);
+    Boolean isGreen = false;
+    Boolean isRed = false;
+    int delay = 500;
     public Gui(){
         setSize(520,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,18 +37,24 @@ public class Gui extends JFrame{
         pin.setText(text);
     }
     public void correct() throws InterruptedException{
-        synchronized(pin){
-            pin.setBackground(new Color(0,255,0));
-            pin.wait(10);
-            pin.setBackground(new Color(255,255,255));
-        }
+        Timer t = new Timer(delay, new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                if(isGreen) {pin.setBackground(new Color(255,255,255));isGreen = false; ((Timer)e.getSource()).stop();}
+            } 
+        });
+        pin.setBackground(new Color(0,255,0));
+        isGreen = true;
+        t.start();
 
     }
     public void incorrect() throws InterruptedException{
-        synchronized(pin){
-            pin.setBackground(new Color(255,0,0));
-            pin.wait(10);
-            pin.setBackground(new Color(255,255,255));
-        }
+        Timer t = new Timer(delay, new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                if(isRed) {pin.setBackground(new Color(255,255,255));isRed = false; ((Timer)e.getSource()).stop();}
+            } 
+        });
+        pin.setBackground(new Color(255,0,0));
+        isRed = true;
+        t.start();
     }
 }
