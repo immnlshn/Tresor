@@ -35,6 +35,7 @@ public class Gui extends JFrame{
         pin.setBackground(new Color(10,14,20));
         pin.setForeground(new Color(255,255,255));
     }
+    public void show(){setVisible(true);}
     public void updateDisplay(String inptext){text = inptext;pin.setText(text);}
     public void correct() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){

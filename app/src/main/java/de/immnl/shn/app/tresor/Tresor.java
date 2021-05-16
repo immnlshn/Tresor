@@ -10,7 +10,7 @@ public class Tresor {
     static Gui a = new Gui();
 
     public static void main(String[] args) {
-        a.setVisible(true);
+        a.show();
     }
     public static void input(char chr) throws InterruptedException{
         if(code.check(chr)){a.correct();a.updateDisplay(a.text+String.valueOf(chr));}
