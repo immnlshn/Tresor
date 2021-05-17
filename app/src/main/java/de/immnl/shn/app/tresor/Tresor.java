@@ -10,7 +10,7 @@ public class Tresor {
     public static Pin code;
     static Gui a = new Gui();
 
-    public static void main(String[] args) {
+    public static void start(){
         a.setVisible(true);
         if(code == null){
             changePassword();
