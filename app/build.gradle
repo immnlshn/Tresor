@@ -6,20 +6,15 @@
  * User Manual available at https://docs.gradle.org/7.0.2/userguide/building_java_projects.html
  */
 
-// apply plugin: 'java'
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
 }
-// repositories { jcenter() }
-// dependencies {
-//     testCompile 'junit:junit:4.13.1'
-//     compile 'junit:junit:4.13.1'
-// }
 
 repositories {
     // Use Maven Central for resolving dependencies.
+    jcenter()
     mavenCentral()
 }
 

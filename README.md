@@ -8,4 +8,4 @@ It's written in Java.☕
 - Java 11.0+
 
 ## Releases ##
-- Currently there is no finished release.🕐
+- 1.0.0 Pre Build
