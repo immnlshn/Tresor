@@ -19,10 +19,14 @@ public class Tresor {
     }
 
     public static void unlock(){
-        a.next();
+        a.unlock();
     }
     public static void lock(){
-        a.next();
+        a.lock();
+    }
+
+    public static void changePassword(){
+        a.changePassword();
     }
 }
  

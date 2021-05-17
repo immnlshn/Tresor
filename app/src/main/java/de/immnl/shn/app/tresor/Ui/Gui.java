@@ -7,12 +7,14 @@ public class Gui extends JFrame{
     CardLayout card = new CardLayout();
     Lockwindow lock = new Lockwindow();
     Optionwindow option = new Optionwindow();
+    changePasswordWindow password = new changePasswordWindow();
     public Gui(){
         setSize(520,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(card);
-        add(lock);
-        add(option);
+        add("LOCK",lock);
+        add("OPTION", option);
+        add("PASSWORD", password);
     }
 
     public Lockwindow getLockWindow(){
@@ -22,7 +24,13 @@ public class Gui extends JFrame{
         return option;
     }
 
-    public void next(){
-        card.next(getContentPane());
+    public void lock(){
+        card.show(getContentPane(), "LOCK");
+    }
+    public void unlock(){
+        card.show(getContentPane(), "OPTION");
+    }
+    public void changePassword(){
+        card.show(getContentPane(), "PASSWORD");
     }
 }
