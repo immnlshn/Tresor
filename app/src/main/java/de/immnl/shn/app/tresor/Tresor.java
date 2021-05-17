@@ -37,5 +37,12 @@ public class Tresor {
         code = new Pin(a.getPassword());
         lock();
     }
+
+    public static int getAttempts(){
+        return code.getAttempts();
+    }
+    public static void setAttempts(int attmpts){
+        a.getLockWindow().setAttempts(attmpts);
+    }
 }
  

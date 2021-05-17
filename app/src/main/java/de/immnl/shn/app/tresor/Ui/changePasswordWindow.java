@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class changePasswordWindow extends Panel{
     JTextField password = new JTextField();
-    JTextArea info = new JTextArea("Your pin MUST be numeric and MUST have a length of 10 characters.\nEnter your pin below:");
+    JTextArea info = new JTextArea("Your pin MUST be numeric\nand MUST have a length of 10 characters.\nEnter your pin below:");
 
 
     public changePasswordWindow(){

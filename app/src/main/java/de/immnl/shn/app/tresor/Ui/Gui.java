@@ -31,6 +31,7 @@ public class Gui extends JFrame{
     public void lock(){
         card.show(getContentPane(), "LOCK");
         lock.resetDisplay();
+        lock.resetAttempts();
     }
     public void unlock(){
         card.show(getContentPane(), "OPTION");
@@ -38,4 +39,5 @@ public class Gui extends JFrame{
     public void changePassword(){
         card.show(getContentPane(), "PASSWORD");
     }
+    
 }

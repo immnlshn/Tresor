@@ -1,14 +1,19 @@
 package de.immnl.shn.app.tresor.Ui;
 
 import javax.swing.*;
+
+import de.immnl.shn.app.tresor.Tresor;
+
 import java.awt.*;
 import java.awt.event.*;
 
 public class Lockwindow extends JPanel{
     GridLayout numlayout = new GridLayout(4,4);
     Panel Numpad = new Panel();
+    Panel Display = new Panel();
     public String text = "Pin: ";
     JLabel pin = new JLabel(text);
+    JLabel attempts = new JLabel("Attempts left: 3");
     Boolean isGreen = false;
     Boolean isRed = false;
     int delay = 500;
@@ -32,15 +37,24 @@ public class Lockwindow extends JPanel{
         Numpad.add(new Numpadbutton("3"));
         Numpad.add(new JLabel());
         Numpad.add(new Numpadbutton("0"));
-        add(Numpad, BorderLayout.CENTER);
-        add(pin, BorderLayout.NORTH);
+        Display.setLayout(new GridLayout(2,1));
         pin.setOpaque(true);
         pin.setFont(new Font(Font.MONOSPACED, Font.BOLD,  32));
         pin.setBackground(new Color(10,14,20));
         pin.setForeground(new Color(255,255,255));
+        attempts.setOpaque(true);
+        attempts.setFont(new Font(Font.MONOSPACED, Font.BOLD,  32));
+        attempts.setBackground(new Color(10,14,20));
+        attempts.setForeground(new Color(255,255,255));
+        Display.add(pin);
+        Display.add(attempts);
+        add(Numpad, BorderLayout.CENTER);
+        add(Display, BorderLayout.NORTH);
+
     }
     public void updateDisplay(String inptext){text = inptext;pin.setText(text);}
     public void resetDisplay(){text = "Pin: "; pin.setText(text);}
+    public void resetAttempts(){attempts.setText("Attempts left: 3");}
     public void correct() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -60,5 +74,9 @@ public class Lockwindow extends JPanel{
         pin.setBackground(new Color(255,0,0));
         isRed = true;
         t.start();
+    }
+
+    public void setAttempts(int attmpts){
+        attempts.setText("Attempts left: "+attmpts);
     }
 }
