@@ -14,6 +14,6 @@ public class Optionwindow extends Panel{
 
     public void build(){
         add(new Lockbutton());
-        add(new Changepwdbutton());
+        add(new Changetopasswordwindowbutton());
     }
 }

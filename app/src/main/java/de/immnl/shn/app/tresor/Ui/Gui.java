@@ -24,8 +24,13 @@ public class Gui extends JFrame{
         return option;
     }
 
+    public String getPassword(){
+        return password.password.getText();
+    }
+
     public void lock(){
         card.show(getContentPane(), "LOCK");
+        lock.resetDisplay();
     }
     public void unlock(){
         card.show(getContentPane(), "OPTION");

@@ -7,11 +7,15 @@ import de.immnl.shn.app.tresor.Ui.Gui;
 
 public class Tresor {
     // public static final Pin code = new Pin((String)JOptionPane.showInputDialog(null, "Input a Pin\n\n\nIt MUST be 10 characters."));
-    public static final Pin code = new Pin("0987654321");
+    public static Pin code;
     static Gui a = new Gui();
 
     public static void main(String[] args) {
         a.setVisible(true);
+        if(code == null){
+            changePassword();
+        }
+        a.changePassword();
     }
     public static void input(char chr) throws InterruptedException{
         if(code.check(chr)){a.getLockWindow().correct();a.getLockWindow().updateDisplay(a.getLockWindow().text+String.valueOf(chr));}
@@ -27,6 +31,11 @@ public class Tresor {
 
     public static void changePassword(){
         a.changePassword();
+    }
+
+    public static void setPassword(){
+        code = new Pin(a.getPassword());
+        lock();
     }
 }
  

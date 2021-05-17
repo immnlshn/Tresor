@@ -40,6 +40,7 @@ public class Lockwindow extends JPanel{
         pin.setForeground(new Color(255,255,255));
     }
     public void updateDisplay(String inptext){text = inptext;pin.setText(text);}
+    public void resetDisplay(){text = "Pin: "; pin.setText(text);}
     public void correct() throws InterruptedException{
         Timer t = new Timer(delay, new ActionListener(){
             public void actionPerformed(ActionEvent e){
