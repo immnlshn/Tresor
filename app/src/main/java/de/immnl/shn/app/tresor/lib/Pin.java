@@ -1,4 +1,4 @@
-package de.immnl.shn.app.tresor;
+package de.immnl.shn.app.tresor.lib;
 
 import javax.swing.JOptionPane;
 

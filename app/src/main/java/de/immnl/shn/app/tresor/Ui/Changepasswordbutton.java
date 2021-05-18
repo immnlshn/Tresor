@@ -1,7 +1,7 @@
 package de.immnl.shn.app.tresor.Ui;
 import java.awt.event.*;
 
-import de.immnl.shn.app.tresor.Tresor;
+import de.immnl.shn.app.tresor.lib.Tresor;
 
 public class Changepasswordbutton extends Button{
     public Changepasswordbutton(){

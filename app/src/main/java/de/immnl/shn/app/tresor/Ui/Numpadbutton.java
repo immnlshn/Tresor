@@ -1,6 +1,6 @@
 package de.immnl.shn.app.tresor.Ui;
 
-import de.immnl.shn.app.tresor.Tresor;
+import de.immnl.shn.app.tresor.lib.Tresor;
 import java.awt.event.*;
 
 public class Numpadbutton extends Button{

@@ -2,7 +2,6 @@ package de.immnl.shn.app.tresor.Ui;
 
 import javax.swing.*;
 
-import de.immnl.shn.app.tresor.Tresor;
 
 import java.awt.*;
 import java.awt.event.*;
