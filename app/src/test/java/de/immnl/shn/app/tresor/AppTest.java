@@ -4,7 +4,10 @@
 package de.immnl.shn.app.tresor;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import de.immnl.shn.app.tresor.lib.Tresor;
+
+// import static org.junit.Assert.*;
 
 public class AppTest {
     @Test public void test() {
