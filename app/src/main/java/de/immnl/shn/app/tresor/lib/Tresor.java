@@ -6,7 +6,6 @@ package de.immnl.shn.app.tresor.lib;
 import de.immnl.shn.app.tresor.Ui.Gui;
 
 public class Tresor {
-    // public static final Pin code = new Pin((String)JOptionPane.showInputDialog(null, "Input a Pin\n\n\nIt MUST be 10 characters."));
     public static Pin code;
     static Gui a = new Gui();
 
